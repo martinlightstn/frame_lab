@@ -174,7 +174,7 @@ const SummonFrameButton = styled.div`
 
   svg {
     height: 20px;
-    transform: scaleX(-1);
+    transform: scaleX(1.2);
   }
 `
 
@@ -205,6 +205,25 @@ const AppearDescription = styled.div`
   svg {
     height: 16px;
     margin-right: 8px;
+  }
+`
+const AppearDescriptionFrame = styled.div`
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-left: 1px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1px;
+  letter-spacing: 1px;
+  height: 50px;
+
+  svg {
+    height: 16px;
+    margin-right: 8px;
+    transform: scale(1.5) translateY(15%);
   }
 `
 
@@ -302,7 +321,7 @@ const ChainButtonIcon = styled.div`
   left: 10px;
   width: 20px;
   height: 20px;
-  background: ${(props) => (props.selected ? 'var(--good)' : 'var(--ghostAZ)')};
+  background: ${(props) => (props.selected ? 'var(--lighton)' : 'var(--ghostAZ)')};
   border-radius: 10px;
   box-sizing: border-box;
   border: solid 3px var(--ghostZ);
@@ -449,8 +468,8 @@ class _Settings extends React.Component {
             <SummonFrameButton>
               <svg viewBox='0 0 512 512'>
                 <path
-                  fill='currentColor'
-                  d='M416 32h-64c-17.67 0-32 14.33-32 32s14.33 32 32 32h64c17.67 0 32 14.33 32 32v256c0 17.67-14.33 32-32 32h-64c-17.67 0-32 14.33-32 32s14.33 32 32 32h64c53.02 0 96-42.98 96-96V128C512 74.98 469 32 416 32zM342.6 233.4l-128-128c-12.51-12.51-32.76-12.49-45.25 0c-12.5 12.5-12.5 32.75 0 45.25L242.8 224H32C14.31 224 0 238.3 0 256s14.31 32 32 32h210.8l-73.38 73.38c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0l128-128C355.1 266.1 355.1 245.9 342.6 233.4z'
+                  fill='currentColor' transform='scale(21.3)'
+                  d='M18.575,11,16.44,7.453A3.016,3.016,0,0,0,13.87,6H5.392L3.115,10.553l1.789.894L6.628,8H9.464L7.711,12.273a3,3,0,0,0,1.172,3.674L13,18.551V24h2V17.449L12.392,15.8l2.767-6.6L17.444,13H22.01V11ZM12.51,2.5A2.5,2.5,0,1,1,15.01,5,2.5,2.5,0,0,1,12.51,2.5ZM7.815,17.638l.665.42L7.679,20H1.01V18H6.34l.5-1.2A4.987,4.987,0,0,0,7.815,17.638Z'
                 />
               </svg>
             </SummonFrameButton>
@@ -492,17 +511,17 @@ class _Settings extends React.Component {
       <>
         <ClusterRow>
           <ClusterValue>
-            <AppearDescription>
+            <AppearDescriptionFrame>
               <svg viewBox='0 0 448 512'>
                 <path
-                  fill='var(--good)'
-                  d='M176 448C167.3 448 160 455.3 160 464V512h32v-48C192 455.3 184.8 448 176 448zM272 448c-8.75 0-16 7.25-16 16s7.25 16 16 16s16-7.25 16-16S280.8 448 272 448zM164 172l8.205 24.62c1.215 3.645 6.375 3.645 7.59 0L188 172l24.62-8.203c3.646-1.219 3.646-6.375 0-7.594L188 148L179.8 123.4c-1.215-3.648-6.375-3.648-7.59 0L164 148L139.4 156.2c-3.646 1.219-3.646 6.375 0 7.594L164 172zM336.1 315.4C304 338.6 265.1 352 224 352s-80.03-13.43-112.1-36.59C46.55 340.2 0 403.3 0 477.3C0 496.5 15.52 512 34.66 512H128v-64c0-17.75 14.25-32 32-32h128c17.75 0 32 14.25 32 32v64h93.34C432.5 512 448 496.5 448 477.3C448 403.3 401.5 340.2 336.1 315.4zM64 224h13.5C102.3 280.5 158.4 320 224 320s121.8-39.5 146.5-96H384c8.75 0 16-7.25 16-16v-96C400 103.3 392.8 96 384 96h-13.5C345.8 39.5 289.6 0 224 0S102.3 39.5 77.5 96H64C55.25 96 48 103.3 48 112v96C48 216.8 55.25 224 64 224zM104 136C104 113.9 125.5 96 152 96h144c26.5 0 48 17.88 48 40V160c0 53-43 96-96 96h-48c-53 0-96-43-96-96V136z'
+                  fill='var(--good)' fill-rule='evenodd' clip-rule='evenodd' transform='scale(21.3)'
+                  d='M0 7L7 16H9L16 7V5L13 1H3L0 5V7ZM8 14H8.02183L13.4663 7H10.625L8 14ZM10.25 5H13.5L12 3H8.75L10.25 5Z'
                 />
               </svg>
               <span>
                 Injecting as <span className='frame'>Frame</span>
               </span>
-            </AppearDescription>
+            </AppearDescriptionFrame>
           </ClusterValue>
         </ClusterRow>
         <ClusterRow>

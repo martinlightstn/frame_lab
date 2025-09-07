@@ -43,3 +43,4 @@ const copy = (files) =>
 copy(['./manifest.json', './settings.html', './icon.png', './FrameLogo.png'])
 ncp(path.join(__dirname, './icons'), path.join(__dirname, '../dist/icons'))
 ncp(path.join(__dirname, './style'), path.join(__dirname, '../dist/style'))
+ncp(path.join(__dirname, './fonts'), path.join(__dirname, '../dist/fonts'))
